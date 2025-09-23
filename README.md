@@ -1,2 +1,2 @@
 # yanjunfu
-My personal website https://dynamite321.github.io/yanjunfu/
+My personal website https://dynamite321.github.io
