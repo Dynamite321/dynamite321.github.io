@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta name="generator" content="Hugo 0.77.0" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Yanjun Fu</title>
+        <meta name="google-site-verification" content="oGEYHQ7QCaawYBdm2e7RUvNt5An5jUOWJvtd_S2qqmM" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#574CDD">
+
+        <link rel="stylesheet" href="css/final.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- (Original inline style block #1) -->
+        <style>
+            .bold{font-weight:600}
+            .highlight{color:#BB2222;font-weight:600}
+            .highlight:hover{color:#BB2222;font-weight:600}
+            .hide{display:none}
+            .bold-red {
+                font-weight: bold;
+                color: red;
+            }
+            .announcement {
+                color: red;
+                font-weight: bold;
+                margin: 0px 0;
+            }
+            .bio {
+                margin: 0px 0;
+                line-height: 1.6;
+            }
+            .links {
+                margin: 0px 0;
+            }
+            .links a {
+                text-decoration: none;
+                color: var(--link-color);
+                margin: 0 0px;
+            }
+            .links a:hover {
+                text-decoration: underline;
+            }
+            propubh2 {
+                font-size: 27px;
+                margin-top: 10;
+                margin-bottom: 24px;
+                font-weight: 800;
+                color: var(--text-color);
+            }
+
+            /* Dark Mode Styles */
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+                --link-color: #0366d6;
+                --border-color: #ddd;
+                --section-bg: #f8fafc;
+            }
+
+            [data-theme="dark"] {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --link-color: #58a6ff;
+                --border-color: #444;
+                --section-bg: #2a2a2a;
+            }
+
+            /* Body styles are defined in the inline style block above */
+
+            .theme-toggle-btn {
+                background: none;
+                border: none;
+                color: var(--text-color);
+                cursor: pointer;
+                font-size: 16px;
+                padding: 5px;
+                margin-left: 5px;
+                border-radius: 3px;
+                transition: background-color 0.3s ease;
+            }
+
+            .theme-toggle-btn:hover {
+                background-color: var(--section-bg);
+            }
+
+            .research-section {
+                background-color: var(--section-bg);
+            }
+
+            .hero-right img {
+                border-color: var(--border-color);
+            }
+
+            a {
+                color: var(--link-color);
+            }
+
+            a:hover {
+                color: var(--link-color);
+            }
+
+            /* propubh2 styles are defined above */
+
+            /* Remove borders from sections to eliminate lines */
+            section {
+                border-bottom: none !important;
+            }
+
+            /* Reduce padding between sections */
+            #education, #experience {
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
+
+            /* Reset ALL containers completely with compressed width */
+            section, .hero, .process {
+                max-width: 800px !important;
+                margin: 0 auto !important;
+                padding: 0 !important;
+            }
+
+            /* Reset ALL container elements to zero */
+            .hero-left, .hero .pubBody {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            /* PRECISE ALIGNMENT: Target each text element individually */
+            .hero-left h2.subtitle {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            /* Bio container - remove all spacing */
+            .hero-left .bio {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            /* Bio text content - align with title with better spacing */
+            .hero-left .bio {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-top: 30px !important;
+            }
+
+            /* Email paragraph - perfect alignment with links */
+            .hero-left .bio p {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+                margin-top: 20px !important;
+                position: relative !important;
+                left: 0 !important;
+            }
+
+            /* Links - perfect alignment with email paragraph */
+            .hero-left .links {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+                margin-top: 25px !important;
+                position: relative !important;
+                left: 0 !important;
+            }
+
+            /* CRITICAL: Force exact same horizontal positioning with aggressive reset */
+            .hero-left .bio p,
+            .hero-left .links {
+                margin: 0 !important;
+                padding: 0 !important;
+                border: 0 !important;
+                outline: 0 !important;
+                vertical-align: baseline !important;
+                background: transparent !important;
+                text-align: left !important;
+                display: block !important;
+                position: static !important;
+                float: none !important;
+                clear: both !important;
+                text-indent: 0 !important;
+                line-height: inherit !important;
+            }
+
+            /* Override any browser default paragraph margins specifically */
+            .hero-left .bio p {
+                margin-top: 20px !important;
+                margin-bottom: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Override any browser default div margins specifically */
+            .hero-left .links {
+                margin-top: 25px !important;
+                margin-bottom: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Fix the space in the links - target the first link specifically */
+            .hero-left .links a:first-child {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            /* Reset all links in the links section */
+            .hero-left .links a {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-decoration: none;
+                display: inline !important;
+            }
+
+            /* Publication and section elements */
+            .hero .pubBody h4,
+            .hero .pubBody p.authors,
+            .hero .pubBody p.info,
+            .hero .pubBody p.links,
+            propubh2.sectitle {
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            /* Publication links styling with perfect alignment and tighter spacing */
+            .hero .pubBody p.links {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-top: 6px !important;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                text-indent: 0 !important;
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                position: relative !important;
+                left: 0 !important;
+            }
+
+            .hero .pubBody p.links a {
+                color: var(--link-color) !important;
+                text-decoration: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .hero .pubBody p.links a:hover {
+                text-decoration: underline !important;
+            }
+
+            /* Education and Experience items alignment with spacing */
+            .education-item {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                text-indent: 0 !important;
+                margin-bottom: 25px !important;
+            }
+
+            .education-item h4,
+            .education-item > div {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            /* Add spacing between individual education/experience entries */
+            .education-item:not(:last-child) {
+                margin-bottom: 30px !important;
+            }
+
+            /* Add consistent top spacing */
+            .hero-left .links {
+                margin-top: 15px !important;
+            }
+
+            /* Force override any inherited styles */
+            * {
+                box-sizing: border-box !important;
+            }
+
+            /* Remove any default browser margins */
+            h2, h4, p, div {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Publication entries with consistent font sizes and equal spacing */
+            .hero .pubBody {
+                width: 100%;
+                margin-bottom: 40px !important;
+            }
+
+            .hero .pubBody h4 {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 6px !important;
+                font-weight: bold !important;
+            }
+
+            .hero .pubBody p.authors {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin: 0 !important;
+                margin-bottom: 6px !important;
+                padding: 0 !important;
+            }
+
+            .hero .pubBody p.info {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin: 0 !important;
+                margin-bottom: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Tighter spacing between all sections */
+            #scroll-element {
+                margin-top: 20px !important;
+            }
+
+            #education, #experience {
+                margin-top: 20px !important;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
+
+            /* Section titles with reduced spacing */
+            propubh2.sectitle {
+                margin-bottom: 20px !important;
+                font-size: 28px !important;
+            }
+
+            /* Ensure consistent spacing between sections */
+            #scroll-element {
+                padding-bottom: 20px !important;
+            }
+
+            #education {
+                padding-bottom: 12px !important;
+            }
+
+            /* Override any inconsistent bottom margins on last publication */
+            .hero:last-of-type .pubBody {
+                margin-bottom: 20px !important;
+            }
+        </style>
+
+        <!-- (Original “Bootstrap Example” block from the source) -->
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- (Original inline style block #2 — moved to head, unchanged) -->
+        <style>
+            body {
+                font-family: system-ui, -apple-system, sans-serif;
+                line-height: 1.6;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 10px;
+                color: var(--text-color);
+                background-color: var(--bg-color);
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .hero {
+                display: flex;
+                gap: 40px;
+                margin-bottom: 0px;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero-left {
+                flex: 1;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero-right {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-right img {
+                max-width: 300px;
+                border-radius: 10px;
+                border: 1px solid var(--border-color);
+            }
+
+            .subtitle {
+                font-size: 3em;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                color: var(--text-color) !important;
+            }
+
+            .icons {
+                display: flex;
+                gap: 15px;
+                margin: 20px 0;
+                align-items: center;
+            }
+
+            .icons a {
+                color: var(--text-color);
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
+
+            .icons svg {
+                width: 24px;
+                height: 24px;
+                transition: opacity 0.2s;
+            }
+
+            .icons a:hover svg {
+                opacity: 0.7;
+            }
+
+            .links {
+                margin: 20px 0;
+                font-size: 1.1em;
+            }
+
+            .links a {
+                color: var(--link-color);
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+            .links a:hover {
+                text-decoration: underline;
+                color: var(--link-color);
+            }
+
+            .job-alert {
+                background-color: #dbeafe;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 10px 0;
+                text-align: center;
+                color: #1e40af;
+            }
+
+            .bio {
+                font-size: 1.1em;
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 1.6;
+            }
+
+            .research-section {
+                margin-top: 5px;
+                padding: 20px;
+                background-color: #f8fafc;
+                border-radius: 8px;
+            }
+
+            .bold-red {
+                color: #dc2626;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <section>
+                <div class="hero">
+                    <div class="hero-left">
+                        <h2 class="subtitle">Yanjun Fu</h2>
+                        <div class="bio">
+                            Yanjun Fu is a Computer Science Ph.D. student at <a href="https://www.umd.edu/">the University of Maryland, College Park</a>, under the supervision of <a href="https://sites.google.com/site/sanghamitraweb/home?authuser=0">Prof. Sanghamitra Dutta</a>. His research interests include LLMs, Efficient Post-training, and Trustworthy ML.
+                            <a id="more-toggle" href="#" onclick="toggleEducationExperience(); return false;" title="See Education & Experience">(more)</a>
+                            <p>Email: yanjunfu (at) umd.edu</p>
+                        </div>
+                        <div class="links">
+                            <a href="https://scholar.google.com/citations?user=O0kxZt0AAAAJ&hl=en&oi=ao">Google Scholar</a> / 
+                            <a href="https://github.com/Dynamite321">Github</a> / 
+                            <a href="https://x.com/yanjun_fu">X</a> / 
+                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle dark/light mode" style="margin: 1px; padding: 0; border: none; background: none; font-size: inherit; color: inherit; vertical-align: baseline;">
+                                <i class="fas fa-moon" id="theme-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <img src="https://dynamite321.github.io/img/photo.jpeg" alt="Yanjun Fu">
+                    </div>
+                </div>
+            </section>
+
+            <section style="padding-top: 20px;" id="scroll-element" data-scroll-index="2" id="publications">
+                <div class="hero" style="margin-top: 20px;">
+                    <propubh2 class="sectitle">Research</propubh2>
+                </div>
+
+                <div class="hero" style="margin-top: 20px;">
+                    <div class="pubBody">
+                        <papertitle class="papertitle">
+                            <h4><b>T-Shirt: Token-Selective Hierarchical Data Selection for Instruction Tuning</b></h4>
+                        </papertitle>
+                        <p class="authors">
+                            <b>Yanjun Fu</b>, Faisal Hamman, Sanghamitra Dutta
+                        </p>
+                        <p class="info">
+                            <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
+                        </p>
+                        <p class="links">
+                            <a target="_blank" href="https://arxiv.org/abs/2506.01317">Paper</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero" style="margin-top: 20px;">
+                    <div class="pubBody">
+                        <papertitle class="papertitle">
+                            <h4><b>Few-Shot Knowledge Distillation of LLMs With Counterfactual Explanations</b></h4>
+                        </papertitle>
+                        <p class="authors">
+                            Faisal Hamman, Pasan Dissanayake, <b>Yanjun Fu</b>, Sanghamitra Dutta
+                        </p>
+                        <p class="info">
+                            <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
+                        </p>
+                        <p class="links">
+                            <!-- No public link provided in resume -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero" style="margin-top: 20px;">
+                    <div class="pubBody">
+                        <papertitle class="papertitle">
+                            <h4><b>Vulnerability Detection with Code Language Models: How Far Are We?</b></h4>
+                        </papertitle>
+                        <p class="authors">
+                            Yangruibo Ding, <b>Yanjun Fu</b>, Omniyyah Ibrahim, Chawin Sitawarin, Xinyun Chen, Basel Alomair, David Wagner, Baishakhi Ray, Yizheng Chen
+                        </p>
+                        <p class="info">
+                            <i>IEEE/ACM International Conference on Software Engineering (ICSE), 2025</i>
+                        </p>
+                        <p class="links">
+                            <a target="_blank" href="https://arxiv.org/abs/2403.18624">Paper</a> /
+                            <a target="_blank" href="https://github.com/DLVulDet/PrimeVul">Code</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero" style="margin-top: 20px;">
+                    <div class="pubBody">
+                        <papertitle class="papertitle">
+                            <h4><b>Constrained Decoding for Secure Code Generation</b></h4>
+                        </papertitle>
+                        <p class="authors">
+                            <b>Yanjun Fu</b>, Ethan Baker, Yu Ding, Yizheng Chen
+                        </p>
+                        <p class="info">
+                            <i>Preprint, 2024</i>
+                        </p>
+                        <p class="links">
+                            <a target="_blank" href="https://arxiv.org/abs/2405.00218">Paper</a> /
+                            <a target="_blank" href="https://github.com/CodeGuardPlus/CodeGuardPlus">Code</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Collapsible Education & Experience -->
+            <div id="edu-exp-content" style="display: none;">
+                <!-- Education -->
+                <section style="padding-top: 10px;" id="education">
+                    <div class="hero" style="margin-top: 20px;">
+                        <propubh2 class="sectitle">Education</propubh2>
+                    </div>
+
+                    <div class="hero" style="margin-top: 10px;">
+                        <div class="pubBody">
+                            <div class="education-item" style="margin-bottom: 15px;">
+                                <h4><strong>University of Maryland, College Park</strong></h4>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>Ph.D. Student in Computer Science</div>
+                                    <div style="font-style: italic;">Aug 2022 - Present</div>
+                                </div>
+                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">College Park, MD</div>
+                            </div>
+
+                            <div class="education-item">
+                                <h4><strong>Shanghai Jiao Tong University</strong></h4>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>B.Eng. in Computer Science</div>
+                                    <div style="font-style: italic;">Sept 2016 - Jun 2020</div>
+                                </div>
+                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Shanghai, China</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section style="padding-top: 10px;" id="experience">
+                    <div class="hero" style="margin-top: 20px;">
+                        <propubh2 class="sectitle">Experience</propubh2>
+                    </div>
+
+                    <div class="hero" style="margin-top: 10px;">
+                        <div class="pubBody">
+                            <div class="education-item" style="margin-bottom: 15px;">
+                                <h4><strong>Meta SuperIntelligence Lab</strong></h4>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>Research Intern | Host: Quanzeng You, Lu Yuan</div>
+                                    <div style="font-style: italic;">June 2025 - Present</div>
+                                </div>
+                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Bellevue, WA</div>
+                            </div>
+
+                            <div class="education-item" style="margin-bottom: 15px;">
+                                <h4><strong>SciFi Lab, Cornell University</strong></h4>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>Visiting Student | Host: Prof. Cheng Zhang</div>
+                                    <div style="font-style: italic;">Jul 2019 - Dec 2019</div>
+                                </div>
+                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Ithaca, NY</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script type="application/javascript">
+            var doNotTrack = false;
+            if (!doNotTrack) {
+                (function(i,s,o,g,r,a,m){
+                    i['GoogleAnalyticsObject']=r;
+                    i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)
+                    }, i[r].l=1*new Date();
+                    a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];
+                    a.async=1;
+                    a.src=g;
+                    m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-XXXXXXXX-Y', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+
+        <script src="https://dynamite321.github.io/js/jquery-1.js"></script>
+        <script src="https://dynamite321.github.io/js/stickUp.js"></script>
+        <script src="https://dynamite321.github.io/js/scrollIt.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            jQuery(function($) {
+                $(document).ready(function() {
+                    $('.main-navigation').stickUp({});
+                });
+            });
+            $(function(){
+                $.scrollIt({
+                    topOffset: -70,
+                    easing: 'ease-in-out'
+                });
+            });
+        </script>
+
+        <script>
+            // Dark Mode Toggle Functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const themeToggle = document.getElementById('theme-toggle');
+                const themeIcon = document.getElementById('theme-icon');
+                const body = document.body;
+
+                // Check for saved theme preference or default to light mode
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                body.setAttribute('data-theme', savedTheme);
+                updateIcon(savedTheme);
+
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = body.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                    body.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateIcon(newTheme);
+                });
+
+                function updateIcon(theme) {
+                    if (theme === 'dark') {
+                        themeIcon.className = 'fas fa-sun';
+                    } else {
+                        themeIcon.className = 'fas fa-moon';
+                    }
+                }
+
+                // Education/Experience toggle functionality
+                window.toggleEducationExperience = function() {
+                    const eduExpContent = document.getElementById('edu-exp-content');
+                    const moreToggle = document.getElementById('more-toggle');
+                    
+                    if (eduExpContent.style.display === 'none' || eduExpContent.style.display === '') {
+                        eduExpContent.style.display = 'block';
+                        moreToggle.textContent = '(less)';
+                    } else {
+                        eduExpContent.style.display = 'none';
+                        moreToggle.textContent = '(more)';
+                    }
+                };
+
+            });
+        </script>
+    </body>
+</html>
