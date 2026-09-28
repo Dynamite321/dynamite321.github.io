@@ -54,4 +54,34 @@
       moreToggle.textContent = expanded ? '(less)' : '(more)';
     });
   });
+
+  // Local file previews should not contact analytics services.
+  if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
+    return;
+  }
+
+  function loadAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-MYEXCN4JMP');
+
+    const googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-MYEXCN4JMP';
+    document.head.appendChild(googleTag);
+
+    const visitorMap = document.createElement('script');
+    visitorMap.async = true;
+    visitorMap.id = 'clustrmaps';
+    visitorMap.src = 'https://clustrmaps.com/map_v2.js?d=FMD5WV_LW25u-g-dGYKLhq9wTFftWAEHOZJRtDrdwhQ';
+    document.getElementById('visitor-map').appendChild(visitorMap);
+  }
+
+  window.addEventListener('load', () => {
+    // Start in a new task, after the initial load event has finished.
+    window.setTimeout(loadAnalytics, 0);
+  }, { once: true });
 })();
