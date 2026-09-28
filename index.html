@@ -1,688 +1,296 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
     <head>
-        <meta name="generator" content="Hugo 0.77.0" />
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Yanjun Fu</title>
-        <meta name="google-site-verification" content="oGEYHQ7QCaawYBdm2e7RUvNt5An5jUOWJvtd_S2qqmM" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#574CDD">
-
-        <link rel="stylesheet" href="css/final.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-        <!-- (Original inline style block #1) -->
-        <style>
-            .bold{font-weight:600}
-            .highlight{color:#BB2222;font-weight:600}
-            .highlight:hover{color:#BB2222;font-weight:600}
-            .hide{display:none}
-            .bold-red {
-                font-weight: bold;
-                color: red;
-            }
-            .announcement {
-                color: red;
-                font-weight: bold;
-                margin: 0px 0;
-            }
-            .bio {
-                margin: 0px 0;
-                line-height: 1.6;
-            }
-            .links {
-                margin: 0px 0;
-            }
-            .links a {
-                text-decoration: none;
-                color: var(--link-color);
-                margin: 0 0px;
-            }
-            .links a:hover {
-                text-decoration: underline;
-            }
-            propubh2 {
-                font-size: 27px;
-                margin-top: 10;
-                margin-bottom: 24px;
-                font-weight: 800;
-                color: var(--text-color);
-            }
-
-            /* Dark Mode Styles */
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #333333;
-                --link-color: #0366d6;
-                --border-color: #ddd;
-                --section-bg: #f8fafc;
-            }
-
-            [data-theme="dark"] {
-                --bg-color: #1a1a1a;
-                --text-color: #e0e0e0;
-                --link-color: #58a6ff;
-                --border-color: #444;
-                --section-bg: #2a2a2a;
-            }
-
-            /* Body styles are defined in the inline style block above */
-
-            .theme-toggle-btn {
-                background: none;
-                border: none;
-                color: var(--text-color);
-                cursor: pointer;
-                font-size: 16px;
-                padding: 5px;
-                margin-left: 5px;
-                border-radius: 3px;
-                transition: background-color 0.3s ease;
-            }
-
-            .theme-toggle-btn:hover {
-                background-color: var(--section-bg);
-            }
-
-            .research-section {
-                background-color: var(--section-bg);
-            }
-
-            .hero-right img {
-                border-color: var(--border-color);
-            }
-
-            a {
-                color: var(--link-color);
-            }
-
-            a:hover {
-                color: var(--link-color);
-            }
-
-            /* propubh2 styles are defined above */
-
-            /* Remove borders from sections to eliminate lines */
-            section {
-                border-bottom: none !important;
-            }
-
-            /* Reduce padding between sections */
-            #education, #experience {
-                padding-top: 10px !important;
-                padding-bottom: 10px !important;
-            }
-
-            /* Reset ALL containers completely with compressed width */
-            section, .hero, .process {
-                max-width: 800px !important;
-                margin: 0 auto !important;
-                padding: 0 !important;
-            }
-
-            /* Reset ALL container elements to zero */
-            .hero-left, .hero .pubBody {
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-
-            /* PRECISE ALIGNMENT: Target each text element individually */
-            .hero-left h2.subtitle {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-indent: 0 !important;
-            }
-
-            /* Bio container - remove all spacing */
-            .hero-left .bio {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-indent: 0 !important;
-            }
-
-            /* Bio text content - align with title with better spacing */
-            .hero-left .bio {
-                margin: 0 !important;
-                padding: 0 !important;
-                margin-top: 30px !important;
-            }
-
-            /* Email paragraph - perfect alignment with links */
-            .hero-left .bio p {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-indent: 0 !important;
-                margin-top: 20px !important;
-                position: relative !important;
-                left: 0 !important;
-            }
-
-            /* Links - perfect alignment with email paragraph */
-            .hero-left .links {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-indent: 0 !important;
-                margin-top: 25px !important;
-                position: relative !important;
-                left: 0 !important;
-            }
-
-            /* CRITICAL: Force exact same horizontal positioning with aggressive reset */
-            .hero-left .bio p,
-            .hero-left .links {
-                margin: 0 !important;
-                padding: 0 !important;
-                border: 0 !important;
-                outline: 0 !important;
-                vertical-align: baseline !important;
-                background: transparent !important;
-                text-align: left !important;
-                display: block !important;
-                position: static !important;
-                float: none !important;
-                clear: both !important;
-                text-indent: 0 !important;
-                line-height: inherit !important;
-            }
-
-            /* Override any browser default paragraph margins specifically */
-            .hero-left .bio p {
-                margin-top: 20px !important;
-                margin-bottom: 0 !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-
-            /* Override any browser default div margins specifically */
-            .hero-left .links {
-                margin-top: 25px !important;
-                margin-bottom: 0 !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-
-            /* Fix the space in the links - target the first link specifically */
-            .hero-left .links a:first-child {
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-                text-indent: 0 !important;
-            }
-
-            /* Reset all links in the links section */
-            .hero-left .links a {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-decoration: none;
-                display: inline !important;
-            }
-
-            /* Publication and section elements */
-            .hero .pubBody h4,
-            .hero .pubBody p.authors,
-            .hero .pubBody p.info,
-            .hero .pubBody p.links,
-            propubh2.sectitle {
-                margin: 0 !important;
-                padding: 0 !important;
-                text-indent: 0 !important;
-            }
-
-            /* Publication links styling with perfect alignment and tighter spacing */
-            .hero .pubBody p.links {
-                margin: 0 !important;
-                padding: 0 !important;
-                margin-top: 6px !important;
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-                text-indent: 0 !important;
-                font-size: 16px !important;
-                line-height: 1.4 !important;
-                position: relative !important;
-                left: 0 !important;
-            }
-
-            .hero .pubBody p.links a {
-                color: var(--link-color) !important;
-                text-decoration: none !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            .hero .pubBody p.links a:hover {
-                text-decoration: underline !important;
-            }
-
-            /* Education and Experience items alignment with spacing */
-            .education-item {
-                margin: 0 !important;
-                padding: 0 !important;
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-                text-indent: 0 !important;
-                margin-bottom: 25px !important;
-            }
-
-            .education-item h4,
-            .education-item > div {
-                margin: 0 !important;
-                padding: 0 !important;
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-                text-indent: 0 !important;
-            }
-
-            /* Add spacing between individual education/experience entries */
-            .education-item:not(:last-child) {
-                margin-bottom: 30px !important;
-            }
-
-            /* Add consistent top spacing */
-            .hero-left .links {
-                margin-top: 15px !important;
-            }
-
-            /* Force override any inherited styles */
-            * {
-                box-sizing: border-box !important;
-            }
-
-            /* Remove any default browser margins */
-            h2, h4, p, div {
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            /* Publication entries with consistent font sizes and equal spacing */
-            .hero .pubBody {
-                width: 100%;
-                margin-bottom: 40px !important;
-            }
-
-            .hero .pubBody h4 {
-                font-size: 16px !important;
-                line-height: 1.4 !important;
-                margin-bottom: 6px !important;
-                font-weight: bold !important;
-            }
-
-            .hero .pubBody p.authors {
-                font-size: 16px !important;
-                line-height: 1.4 !important;
-                margin: 0 !important;
-                margin-bottom: 6px !important;
-                padding: 0 !important;
-            }
-
-            .hero .pubBody p.info {
-                font-size: 16px !important;
-                line-height: 1.4 !important;
-                margin: 0 !important;
-                margin-bottom: 0 !important;
-                padding: 0 !important;
-            }
-
-            /* Tighter spacing between all sections */
-            #scroll-element {
-                margin-top: 20px !important;
-            }
-
-            #education, #experience {
-                margin-top: 20px !important;
-                padding-top: 10px !important;
-                padding-bottom: 10px !important;
-            }
-
-            /* Section titles with reduced spacing */
-            propubh2.sectitle {
-                margin-bottom: 20px !important;
-                font-size: 28px !important;
-            }
-
-            /* Ensure consistent spacing between sections */
-            #scroll-element {
-                padding-bottom: 20px !important;
-            }
-
-            #education {
-                padding-bottom: 12px !important;
-            }
-
-            /* Override any inconsistent bottom margins on last publication */
-            .hero:last-of-type .pubBody {
-                margin-bottom: 20px !important;
-            }
-        </style>
-
-        <!-- (Original “Bootstrap Example” block from the source) -->
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yanjun Fu | Computer Science Ph.D. Candidate</title>
+        <meta name="description" content="Yanjun Fu is a Computer Science Ph.D. candidate at the University of Maryland, College Park, working on LLM/VLM post-training and model interpretability.">
+        <meta name="author" content="Yanjun Fu">
+        <meta name="google-site-verification" content="oGEYHQ7QCaawYBdm2e7RUvNt5An5jUOWJvtd_S2qqmM">
+        <meta name="theme-color" content="#ffffff" id="theme-color">
+        <link rel="canonical" href="https://dynamite321.github.io/">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Yanjun Fu">
+        <meta property="og:title" content="Yanjun Fu | Computer Science Ph.D. Candidate">
+        <meta property="og:description" content="Computer Science Ph.D. candidate at the University of Maryland, College Park. Research in LLM/VLM post-training and model interpretability.">
+        <meta property="og:url" content="https://dynamite321.github.io/">
+        <meta property="og:image" content="https://dynamite321.github.io/img/photo-web.jpeg">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="400">
+        <meta property="og:image:alt" content="Yanjun Fu">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@yanjun_fu">
+        <meta name="twitter:title" content="Yanjun Fu | Computer Science Ph.D. Candidate">
+        <meta name="twitter:description" content="Computer Science Ph.D. candidate at the University of Maryland, College Park. Research in LLM/VLM post-training and model interpretability.">
+        <meta name="twitter:image" content="https://dynamite321.github.io/img/photo-web.jpeg">
+        <meta name="twitter:image:alt" content="Yanjun Fu">
 
-        <!-- (Original inline style block #2 — moved to head, unchanged) -->
-        <style>
-            body {
-                font-family: system-ui, -apple-system, sans-serif;
-                line-height: 1.6;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 10px;
-                color: var(--text-color);
-                background-color: var(--bg-color);
-                transition: background-color 0.3s ease, color 0.3s ease;
-            }
-
-            .hero {
-                display: flex;
-                gap: 40px;
-                margin-bottom: 0px;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-
-            .hero-left {
-                flex: 1;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-
-            .hero-right {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .hero-right img {
-                max-width: 300px;
-                border-radius: 10px;
-                border: 1px solid var(--border-color);
-            }
-
-            .subtitle {
-                font-size: 3em;
-                margin-top: 40px;
-                margin-bottom: 20px;
-                color: var(--text-color) !important;
-            }
-
-            .icons {
-                display: flex;
-                gap: 15px;
-                margin: 20px 0;
-                align-items: center;
-            }
-
-            .icons a {
-                color: var(--text-color);
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-            }
-
-            .icons svg {
-                width: 24px;
-                height: 24px;
-                transition: opacity 0.2s;
-            }
-
-            .icons a:hover svg {
-                opacity: 0.7;
-            }
-
-            .links {
-                margin: 20px 0;
-                font-size: 1.1em;
-            }
-
-            .links a {
-                color: var(--link-color);
-                text-decoration: none;
-                margin: 0 5px;
-            }
-
-            .links a:hover {
-                text-decoration: underline;
-                color: var(--link-color);
-            }
-
-            .job-alert {
-                background-color: #dbeafe;
-                padding: 15px;
-                border-radius: 8px;
-                margin: 10px 0;
-                text-align: center;
-                color: #1e40af;
-            }
-
-            .bio {
-                font-size: 1.1em;
-                margin: 0 !important;
-                padding: 0 !important;
-                line-height: 1.6;
-            }
-
-            .research-section {
-                margin-top: 5px;
-                padding: 20px;
-                background-color: #f8fafc;
-                border-radius: 8px;
-            }
-
-            .bold-red {
-                color: #dc2626;
-                font-weight: bold;
-            }
-        </style>
+        <script src="js/site.js"></script>
+        <link rel="stylesheet" href="css/final.css">
     </head>
 
     <body>
-        <div>
-            <section>
-                <div class="hero">
-                    <div class="hero-left">
-                        <h2 class="subtitle">Yanjun Fu</h2>
-                        <div class="bio">
-                            Yanjun Fu is a Computer Science Ph.D. candidate at <a href="https://www.umd.edu/">the University of Maryland, College Park</a>, under the supervision of <a href="https://sites.google.com/site/sanghamitraweb/home?authuser=0">Prof. Sanghamitra Dutta</a>. His research interests include LLMs, Efficient Post-training, and Trustworthy ML.
-                            <a id="more-toggle" href="#" onclick="toggleEducationExperience(); return false;" title="See Education & Experience">(more)</a>
-                            <p>Email: yanjunfu (at) umd.edu</p>
+        <a class="skip-link" href="#publications">Skip to research</a>
+        <div class="page">
+            <aside class="profile" aria-labelledby="name-heading">
+                <img class="profile-photo" src="img/photo-web.jpeg" alt="Yanjun Fu" width="600" height="400" fetchpriority="high">
+                <div class="profile-details">
+                    <h1 id="name-heading">Yanjun Fu</h1>
+                    <p class="email"><svg class="profile-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/></svg><span>Email: yanjunfu (at) umd.edu</span></p>
+                    <nav class="profile-links" aria-label="Profile links">
+                        <a href="https://scholar.google.com/citations?user=O0kxZt0AAAAJ&amp;hl=en&amp;oi=ao"><svg class="profile-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M390.9 298.5s0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64-.1 82.5-66.9 149.4-149.4 149.4S106.7 445.1 106.7 362.7c0-22.9 5.2-44.6 14.4-64 1.7-3.6 3.6-7.2 5.6-10.7 4.4-7.6 9.4-14.7 15-21.3 27.4-32.6 68.5-53.3 114.4-53.3 33.6 0 64.6 11.1 89.6 29.9 9.1 6.9 17.4 14.7 24.8 23.5 5.6 6.6 10.6 13.8 15 21.3 2 3.4 3.8 7 5.5 10.5l-.1-.1zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4l-94.7-77 256-202.7 256 202.7-94.7 77.1 0-.1z"/></svg><span>Google Scholar</span></a>
+                        <a href="https://github.com/Dynamite321"><svg class="profile-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5l0 52C323 491.5 335.5 500 350.5 494 441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5l0-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/></svg><span>GitHub</span></a>
+                        <a href="https://x.com/yanjun_fu"><svg class="profile-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"/></svg><span>X</span></a>
+                        <a href="https://www.linkedin.com/in/yanjun-fu-0b15b8294/"><svg class="profile-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg><span>LinkedIn</span></a>
+                        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
+                            <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
+                            </svg>
+                            <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+            </aside>
+
+            <main class="main-content" id="main-content" aria-label="About and research">
+                <div class="bio">
+                    <p>I am a Computer Science Ph.D. candidate at <a href="https://www.umd.edu/">the University of Maryland, College Park</a>, advised by <a href="https://sites.google.com/site/sanghamitraweb/home?authuser=0">Prof. Sanghamitra Dutta</a>. My research focuses on <strong>LLM/VLM post-training and reasoning</strong>, with an emphasis on improving their efficiency and effectiveness from both data and algorithmic perspectives, as well as on <strong>interpretability</strong>. Previously, I worked on <strong>Code LLMs</strong>, <strong>AI security</strong>, and <strong>trustworthy ML</strong>.</p>
+                    <p>I have spent time interning at <a href="https://www.tiktok.com/">TikTok</a> (2026) and <a href="https://www.meta.com/superintelligence/">Meta Superintelligence Labs</a> (2025).
+                        <button id="more-toggle" class="text-button" type="button" aria-expanded="false" aria-controls="edu-exp-content" aria-label="Show education and experience" hidden>(more)</button>
+                    </p>
+                </div>
+
+                <section id="publications" aria-labelledby="research-heading" tabindex="-1">
+                    <h2 id="research-heading">Research</h2>
+
+                    <div class="publication-group">
+                        <p class="publication-year" aria-hidden="true">2026</p>
+                        <div class="publication-list">
+                            <article class="publication">
+                                <h3><span class="small-caps">LogT</span>: Logically Think with Images for Visual Search</h3>
+                                <p class="authors">
+                                    <b>Yanjun Fu</b>, Quanzeng You, Jiadong Guo, Yujie Lu, Sai Charitha Akula, Haiping Wu, Miao Liu, Sanghamitra Dutta, Lu Yuan
+                                </p>
+                                <p class="info">
+                                    <i>Conference on Neural Information Processing Systems (NeurIPS), 2026</i>
+                                </p>
+                                <p class="links">Paper and code coming soon.</p>
+                                <details class="paper-tldr">
+                                    <summary aria-label="TL;DR for LogT">TL;DR</summary>
+                                    <div class="paper-tldr-content">
+                                        <p>Proposes an agentic data engine that synthesizes SFT data for VLM tool use. Using SFT alone, <span class="small-caps">LogT-SFT</span> surpasses the SOTA model trained with both SFT and RL by 1.9 points, and <span class="small-caps">LogT-RL</span> surpasses the SOTA by 9.6 points.</p>
+                                        <p class="paper-keywords"><strong>Keywords:</strong> Agentic data synthesis for VLM agents</p>
+                                    </div>
+                                </details>
+                            </article>
                         </div>
-                        <div class="links">
-                            <a href="https://scholar.google.com/citations?user=O0kxZt0AAAAJ&hl=en&oi=ao">Google Scholar</a> / 
-                            <a href="https://github.com/Dynamite321">Github</a> / 
-                            <a href="https://x.com/yanjun_fu">X</a> / 
-                            <a href="https://www.linkedin.com/in/yanjun-fu-0b15b8294/">LinkedIn</a> / 
-                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle dark/light mode" style="margin: 1px; padding: 0; border: none; background: none; font-size: inherit; color: inherit; vertical-align: baseline;">
-                                <i class="fas fa-moon" id="theme-icon"></i>
-                            </button>
+                    </div>
+
+                    <div class="publication-group">
+                        <p class="publication-year" aria-hidden="true">2025</p>
+                        <div class="publication-list">
+                            <article class="publication">
+                                <h3><span class="small-caps">T-Shirt</span>: Token-Selective Hierarchical Data Selection for Instruction Tuning</h3>
+                                <p class="authors">
+                                    <b>Yanjun Fu</b>, Faisal Hamman, Sanghamitra Dutta
+                                </p>
+                                <p class="info">
+                                    <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
+                                </p>
+                                <p class="links publication-links">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2506.01317">Paper</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Dynamite321/T-SHIRT">Code</a>
+                                </p>
+                                <details class="paper-tldr">
+                                    <summary aria-label="TL;DR for T-Shirt">TL;DR</summary>
+                                    <div class="paper-tldr-content">
+                                        <p>Selects SFT examples by focusing on informative tokens and checking quality consistency among similar samples. Models trained on just 5% of the data can outperform those trained on the full dataset.</p>
+                                        <p class="paper-keywords"><strong>Keywords:</strong> Data selection for SFT</p>
+                                    </div>
+                                </details>
+                            </article>
+
+                            <article class="publication">
+                                <h3>Few-Shot Knowledge Distillation of LLMs With Counterfactual Explanations</h3>
+                                <p class="authors">
+                                    Faisal Hamman, Pasan Dissanayake, <b>Yanjun Fu</b>, Sanghamitra Dutta
+                                </p>
+                                <p class="info">
+                                    <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
+                                </p>
+                                <p class="links publication-links">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2510.21631">Paper</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/FaisalHamman/CoD">Code</a>
+                                </p>
+                                <details class="paper-tldr">
+                                    <summary aria-label="TL;DR for Few-Shot Knowledge Distillation of LLMs With Counterfactual Explanations">TL;DR</summary>
+                                    <div class="paper-tldr-content">
+                                        <p>Uses minimally changed examples that flip a teacher model's prediction to help a smaller model learn its decision boundary. This improves knowledge distillation with very little training data.</p>
+                                        <p class="paper-keywords"><strong>Keywords:</strong> Knowledge distillation · Counterfactual explanations</p>
+                                    </div>
+                                </details>
+                            </article>
+
+                            <article class="publication">
+                                <h3>Vulnerability Detection with Code Language Models: How Far Are We?</h3>
+                                <p class="authors">
+                                    Yangruibo Ding, <b>Yanjun Fu</b>, Omniyyah Ibrahim, Chawin Sitawarin, Xinyun Chen, Basel Alomair, David Wagner, Baishakhi Ray, Yizheng Chen
+                                </p>
+                                <p class="info">
+                                    <i>IEEE/ACM International Conference on Software Engineering (ICSE), 2025</i>
+                                </p>
+                                <p class="links publication-links">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2403.18624">Paper</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/DLVulDet/PrimeVul">Code</a>
+                                </p>
+                                <details class="paper-tldr">
+                                    <summary aria-label="TL;DR for Vulnerability Detection with Code Language Models: How Far Are We?">TL;DR</summary>
+                                    <div class="paper-tldr-content">
+                                        <p>Introduces <span class="small-caps">PrimeVul</span>, a vulnerability-detection dataset with much higher quality and realistic evaluation settings, and shows that existing benchmarks substantially overestimate code models' ability to detect vulnerabilities.</p>
+                                        <p class="paper-keywords"><strong>Keywords:</strong> Code LLMs · Vulnerability detection</p>
+                                    </div>
+                                </details>
+                                <div class="impact-notes">
+                                    <p class="links">
+                                        Adopted by <a target="_blank" rel="noopener noreferrer" href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"><strong>Gemini 1.5 Pro</strong></a> and <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/pdf/2603.00729"><strong>Qwen3-Coder-Next</strong></a>
+                                    </p>
+                                    <p class="links">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://resources.paperdigest.org/2026/04/most-influential-arxiv-software-engineering-papers-2026-04-version/"><em><strong>No.2</strong>, Most Influential ICSE 2025 Paper (Paper Digest)</em></a>
+                                    </p>
+                                    <p class="links">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://resources.paperdigest.org/2026/04/most-influential-arxiv-software-engineering-papers-2026-04-version/"><em><strong>No.13</strong>, Most Influential arXiv 2024 Paper on Software Engineering (Paper Digest)</em></a>
+                                    </p>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="hero-right">
-                        <img src="https://dynamite321.github.io/img/photo.jpeg" alt="Yanjun Fu">
+
+                    <div class="publication-group">
+                        <p class="publication-year" aria-hidden="true">2024</p>
+                        <div class="publication-list">
+                            <article class="publication">
+                                <h3>Constrained Decoding for Secure Code Generation</h3>
+                                <p class="authors">
+                                    <b>Yanjun Fu</b>, Ethan Baker, Yu Ding, Yizheng Chen
+                                </p>
+                                <p class="info">
+                                    <i>Preprint, 2024</i>
+                                </p>
+                                <p class="links publication-links">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2405.00218">Paper</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/CodeGuardPlus/CodeGuardPlus">Code</a>
+                                </p>
+                                <details class="paper-tldr">
+                                    <summary aria-label="TL;DR for Constrained Decoding for Secure Code Generation">TL;DR</summary>
+                                    <div class="paper-tldr-content">
+                                        <p>Introduces <span class="small-caps">CodeGuard+</span> to evaluate whether generated code is both secure and correct, and uses constrained decoding to improve security without a specialized training dataset.</p>
+                                        <p class="paper-keywords"><strong>Keywords:</strong> Code LLMs · Secure code generation · Constrained decoding</p>
+                                    </div>
+                                </details>
+                            </article>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section style="padding-top: 20px;" id="scroll-element" data-scroll-index="2" id="publications">
-                <div class="hero" style="margin-top: 20px;">
-                    <propubh2 class="sectitle">Research</propubh2>
-                </div>
-
-                <div class="hero" style="margin-top: 20px;">
-                    <div class="pubBody">
-                        <papertitle class="papertitle">
-                            <h4><b>LogT: Logically Think with Images for Visual Search</b></h4>
-                        </papertitle>
-                        <p class="authors">
-                            <b>Yanjun Fu</b>, Quanzeng You, Jiadong Guo, Yujie Lu, Sai Charitha Akula, Haiping Wu, Miao Liu, Sanghamitra Dutta, Lu Yuan
-                        </p>
-                        <p class="info">
-                            <i>Conference on Neural Information Processing Systems (NeurIPS), 2026</i>
-                        </p>
-                        <!-- <p class="links">
-                            <a target="_blank" href="https://arxiv.org/abs/2506.01317">Paper</a> /
-                            <a target="_blank" href="https://github.com/Dynamite321/T-SHIRT">Code</a>
-                        </p> -->
-                    </div>
-                </div>
-
-                <div class="hero" style="margin-top: 20px;">
-                    <div class="pubBody">
-                        <papertitle class="papertitle">
-                            <h4><b>T-SHIRT: Token-Selective Hierarchical Data Selection for Instruction Tuning</b></h4>
-                        </papertitle>
-                        <p class="authors">
-                            <b>Yanjun Fu</b>, Faisal Hamman, Sanghamitra Dutta
-                        </p>
-                        <p class="info">
-                            <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
-                        </p>
-                        <p class="links">
-                            <a target="_blank" href="https://arxiv.org/abs/2506.01317">Paper</a> /
-                            <a target="_blank" href="https://github.com/Dynamite321/T-SHIRT">Code</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hero" style="margin-top: 20px;">
-                    <div class="pubBody">
-                        <papertitle class="papertitle">
-                            <h4><b>Few-Shot Knowledge Distillation of LLMs With Counterfactual Explanations</b></h4>
-                        </papertitle>
-                        <p class="authors">
-                            Faisal Hamman, Pasan Dissanayake, <b>Yanjun Fu</b>, Sanghamitra Dutta
-                        </p>
-                        <p class="info">
-                            <i>Conference on Neural Information Processing Systems (NeurIPS), 2025</i>
-                        </p>
-                        <p class="links">
-                            <a target="_blank" href="https://arxiv.org/abs/2510.21631">Paper</a> /
-                            <a target="_blank" href="https://github.com/FaisalHamman/CoD">Code</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hero" style="margin-top: 20px;">
-                    <div class="pubBody">
-                        <papertitle class="papertitle">
-                            <h4><b>Vulnerability Detection with Code Language Models: How Far Are We?</b></h4>
-                        </papertitle>
-                        <p class="authors">
-                            Yangruibo Ding, <b>Yanjun Fu</b>, Omniyyah Ibrahim, Chawin Sitawarin, Xinyun Chen, Basel Alomair, David Wagner, Baishakhi Ray, Yizheng Chen
-                        </p>
-                        <p class="info">
-                            <i>IEEE/ACM International Conference on Software Engineering (ICSE), 2025</i>
-                        </p>
-                        <p class="links">
-                            <a target="_blank" href="https://arxiv.org/abs/2403.18624">Paper</a> /
-                            <a target="_blank" href="https://github.com/DLVulDet/PrimeVul">Code</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hero" style="margin-top: 20px;">
-                    <div class="pubBody">
-                        <papertitle class="papertitle">
-                            <h4><b>Constrained Decoding for Secure Code Generation</b></h4>
-                        </papertitle>
-                        <p class="authors">
-                            <b>Yanjun Fu</b>, Ethan Baker, Yu Ding, Yizheng Chen
-                        </p>
-                        <p class="info">
-                            <i>Preprint, 2024</i>
-                        </p>
-                        <p class="links">
-                            <a target="_blank" href="https://arxiv.org/abs/2405.00218">Paper</a> /
-                            <a target="_blank" href="https://github.com/CodeGuardPlus/CodeGuardPlus">Code</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Collapsible Education & Experience -->
-            <div id="edu-exp-content" style="display: none;">
-                <!-- Education -->
-                <section style="padding-top: 10px;" id="education">
-                    <div class="hero" style="margin-top: 20px;">
-                        <propubh2 class="sectitle">Education</propubh2>
-                    </div>
-
-                    <div class="hero" style="margin-top: 10px;">
-                        <div class="pubBody">
-                            <div class="education-item" style="margin-bottom: 15px;">
-                                <h4><strong>University of Maryland, College Park</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <!-- Collapsible Education & Experience -->
+                <div id="edu-exp-content">
+                    <!-- Education -->
+                    <section id="education" aria-labelledby="education-heading">
+                        <h2 id="education-heading">Education</h2>
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img src="img/logos/umd.png" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>University of Maryland, College Park</h3>
+                                <div class="entry-details">
                                     <div>Ph.D. Student in Computer Science</div>
-                                    <div style="font-style: italic;">Aug 2022 - Present</div>
+                                    <div class="entry-date">Aug 2022 - Present</div>
                                 </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">College Park, MD</div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>College Park, MD</span></div>
                             </div>
+                        </div>
 
-                            <div class="education-item">
-                                <h4><strong>Shanghai Jiao Tong University</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img src="img/logos/sjtu.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>Shanghai Jiao Tong University</h3>
+                                <div class="entry-details">
                                     <div>B.Eng. in Computer Science</div>
-                                    <div style="font-style: italic;">Sept 2016 - Jun 2020</div>
+                                    <div class="entry-date">Sept 2016 - Jun 2020</div>
                                 </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Shanghai, China</div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>Shanghai, China</span></div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Experience -->
-                <section style="padding-top: 10px;" id="experience">
-                    <div class="hero" style="margin-top: 20px;">
-                        <propubh2 class="sectitle">Experience</propubh2>
-                    </div>
-
-                    <div class="hero" style="margin-top: 10px;">
-                        <div class="pubBody">
-                            <div class="education-item" style="margin-bottom: 15px;">
-                                <h4><strong>TikTok</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Experience -->
+                    <section id="experience" aria-labelledby="experience-heading">
+                        <h2 id="experience-heading">Experience</h2>
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img class="monochrome-logo" src="img/logos/tiktok.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>TikTok</h3>
+                                <div class="entry-details">
                                     <div>Research Intern | Host: <a href="https://shunchi.dev/">Shunchi Zhang</a></div>
-                                    <div style="font-style: italic;">June 2026 - Present</div>
+                                    <div class="entry-date">June 2026 - Present</div>
                                 </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">San Jose, CA</div>
-                            </div>
-
-                            <div class="education-item" style="margin-bottom: 15px;">
-                                <h4><strong>Meta Superintelligence Labs</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div>Research Intern | Host: <a href="https://qzyou.github.io/">Dr. Quanzeng You</a>, <a href="https://scholar.google.com/citations?user=k9TsUVsAAAAJ&hl=en">Dr. Lu Yuan</a></div>
-                                    <div style="font-style: italic;">June 2025 - Dec 2025</div>
-                                </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Bellevue, WA</div>
-                            </div>
-
-                            <div class="education-item" style="margin-bottom: 15px;">
-                                <h4><strong>SciFi Lab, Cornell University</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div>Visiting Student | Host: <a href="https://czhang.org/">Prof. Cheng Zhang</a></div>
-                                    <div style="font-style: italic;">Jul 2019 - Dec 2019</div>
-                                </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Ithaca, NY</div>
-                            </div>
-
-                            <div class="education-item" style="margin-bottom: 15px;">
-                                <h4><strong>Shanghai Jiao Tong University</strong></h4>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div>Research Assistant | Advisor: <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Prof. Haiming Jin</a></div>
-                                    <div style="font-style: italic;">Jul 2019 - May 2021</div>
-                                </div>
-                                <div style="color: var(--text-color); opacity: 0.7; margin-top: 5px;">Shanghai, China</div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>San Jose, CA</span></div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
+
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img src="img/logos/meta.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>Meta Superintelligence Labs</h3>
+                                <div class="entry-details">
+                                    <div>Research Intern | Host: <a href="https://qzyou.github.io/">Dr. Quanzeng You</a>, <a href="https://scholar.google.com/citations?user=k9TsUVsAAAAJ&amp;hl=en">Dr. Lu Yuan</a></div>
+                                    <div class="entry-date">June 2025 - Dec 2025</div>
+                                </div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>Bellevue, WA</span></div>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img src="img/logos/cornell-seal.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>SciFi Lab, Cornell University</h3>
+                                <div class="entry-details">
+                                    <div>Visiting Student | Host: <a href="https://czhang.org/">Prof. Cheng Zhang</a></div>
+                                    <div class="entry-date">Jul 2019 - Dec 2019</div>
+                                </div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>Ithaca, NY</span></div>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="institution-logo" aria-hidden="true">
+                                <img src="img/logos/sjtu.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+                            </div>
+                            <div class="entry-content">
+                                <h3>Shanghai Jiao Tong University</h3>
+                                <div class="entry-details">
+                                    <div>Research Assistant | Advisor: <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Prof. Haiming Jin</a></div>
+                                    <div class="entry-date">Jul 2019 - May 2021</div>
+                                </div>
+                                <div class="entry-location"><svg class="location-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg><span>Shanghai, China</span></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
         </div>
 
         <!-- Google tag (gtag.js) -->
@@ -696,71 +304,9 @@
         </script>
 
         <!-- MapMyVisitors - Visitor Tracking Map (Hidden from public) -->
-        <div style="display: none;">
-            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=FMD5WV_LW25u-g-dGYKLhq9wTFftWAEHOZJRtDrdwhQ"></script>
+        <div hidden>
+            <script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=FMD5WV_LW25u-g-dGYKLhq9wTFftWAEHOZJRtDrdwhQ"></script>
         </div>
 
-        <script src="https://dynamite321.github.io/js/jquery-1.js"></script>
-        <script src="https://dynamite321.github.io/js/stickUp.js"></script>
-        <script src="https://dynamite321.github.io/js/scrollIt.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            jQuery(function($) {
-                $(document).ready(function() {
-                    $('.main-navigation').stickUp({});
-                });
-            });
-            $(function(){
-                $.scrollIt({
-                    topOffset: -70,
-                    easing: 'ease-in-out'
-                });
-            });
-        </script>
-
-        <script>
-            // Dark Mode Toggle Functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const themeToggle = document.getElementById('theme-toggle');
-                const themeIcon = document.getElementById('theme-icon');
-                const body = document.body;
-
-                // Check for saved theme preference or default to light mode
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                body.setAttribute('data-theme', savedTheme);
-                updateIcon(savedTheme);
-
-                themeToggle.addEventListener('click', function() {
-                    const currentTheme = body.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-                    body.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    updateIcon(newTheme);
-                });
-
-                function updateIcon(theme) {
-                    if (theme === 'dark') {
-                        themeIcon.className = 'fas fa-sun';
-                    } else {
-                        themeIcon.className = 'fas fa-moon';
-                    }
-                }
-
-                // Education/Experience toggle functionality
-                window.toggleEducationExperience = function() {
-                    const eduExpContent = document.getElementById('edu-exp-content');
-                    const moreToggle = document.getElementById('more-toggle');
-                    
-                    if (eduExpContent.style.display === 'none' || eduExpContent.style.display === '') {
-                        eduExpContent.style.display = 'block';
-                        moreToggle.textContent = '(less)';
-                    } else {
-                        eduExpContent.style.display = 'none';
-                        moreToggle.textContent = '(more)';
-                    }
-                };
-
-            });
-        </script>
     </body>
 </html>
