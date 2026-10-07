@@ -75,8 +75,9 @@
 
     const visitorMap = document.createElement('script');
     visitorMap.async = true;
-    visitorMap.id = 'clustrmaps';
-    visitorMap.src = 'https://clustrmaps.com/map_v2.js?d=FMD5WV_LW25u-g-dGYKLhq9wTFftWAEHOZJRtDrdwhQ';
+    // Use the site's original MapMyVisitors widget; clustrmaps.com is unavailable.
+    visitorMap.id = 'mapmyvisitors';
+    visitorMap.src = 'https://mapmyvisitors.com/map.js?d=kHzaAh7bBct_UfN7yHKWaig3FmPJMi3jUde_73JMElQ&cl=ffffff&w=a';
     document.getElementById('visitor-map').appendChild(visitorMap);
   }
 
